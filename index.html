@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Маңғыстау ауданы | Президенттер</title>
+    <meta
+      name="description"
+      content="Маңғыстау ауданының президенттері: таныстыру және миссия."
+    />
+    <style>
+      :root {
+        --bg: #0b1220;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel2: rgba(255, 255, 255, 0.1);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.68);
+        --line: rgba(255, 255, 255, 0.14);
+        --accent: #7dd3fc;
+        --accent2: #a78bfa;
+        --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+        --shadow2: 0 10px 30px rgba(0, 0, 0, 0.35);
+        --radius: 18px;
+        --radius2: 22px;
+        --max: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          "Noto Sans",
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background:
+          radial-gradient(
+            1000px 700px at 10% 10%,
+            rgba(125, 211, 252, 0.1),
+            transparent 55%
+          ),
+          radial-gradient(
+            900px 600px at 90% 20%,
+            rgba(167, 139, 250, 0.1),
+            transparent 55%
+          ),
+          radial-gradient(
+            900px 700px at 30% 90%,
+            rgba(34, 197, 94, 0.08),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      /* ===== NAV ===== */
+      .nav {
+        position: fixed;
+        top: 14px;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        pointer-events: none;
+      }
+      .nav .wrap {
+        pointer-events: auto;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        background: rgba(10, 16, 30, 0.55);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        box-shadow: var(--shadow2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 8px;
+        letter-spacing: 0.2px;
+        user-select: none;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: conic-gradient(
+          from 90deg,
+          var(--accent),
+          var(--accent2),
+          #34d399,
+          var(--accent)
+        );
+        box-shadow: 0 0 0 6px rgba(125, 211, 252, 0.08);
+      }
+      .brand b {
+        font-weight: 800;
+      }
+      .tabs {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        padding: 3px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .tab {
+        position: relative;
+        padding: 10px 14px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-weight: 650;
+        transition:
+          transform 0.18s ease,
+          color 0.18s ease,
+          background 0.18s ease;
+      }
+      .tab:hover {
+        color: var(--text);
+        transform: translateY(-1px);
+      }
+      .tab.active {
+        color: var(--text);
+        background: linear-gradient(
+          135deg,
+          rgba(125, 211, 252, 0.18),
+          rgba(167, 139, 250, 0.14)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .tab .underline {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 7px;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(125, 211, 252, 0.9),
+          rgba(167, 139, 250, 0.85),
+          transparent
+        );
+        opacity: 0;
+        transform: scaleX(0.6);
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+      }
+      .tab.active .underline {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+
+      .navBtn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        font-weight: 700;
+        transition:
+          transform 0.18s ease,
+          background 0.18s ease,
+          border 0.18s ease;
+      }
+      .navBtn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .navBtn:active {
+        transform: translateY(0px) scale(0.98);
+      }
+
+      /* ===== SECTIONS ===== */
+      main {
+        padding-top: 88px;
+      }
+      section {
+        min-height: calc(100vh - 88px);
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+        position: relative;
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 28px;
+        align-items: center;
+      }
+      @media (max-width: 980px) {
+        .grid2 {
+          grid-template-columns: 1fr;
+        }
+        .nav .wrap {
+          border-radius: 18px;
+        }
+        .tabs {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      /* ===== HERO ===== */
+      .heroCard {
+        border-radius: var(--radius2);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+        min-height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .heroBg {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75)),
+          url("") center/cover no-repeat;
+        filter: blur(2px) saturate(1.05);
+        transform: scale(1.05);
+      }
+      .heroBg {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75)),
+          url("аха котак.jpg") center/cover no-repeat;
+        filter: blur(2px) saturate(1.05);
+        transform: scale(1.05);
+      }
+      .heroGlow {
+        position: absolute;
+        inset: -40px;
+        background:
+          radial-gradient(
+            520px 320px at 12% 18%,
+            rgba(125, 211, 252, 0.22),
+            transparent 60%
+          ),
+          radial-gradient(
+            520px 320px at 85% 30%,
+            rgba(167, 139, 250, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            520px 320px at 60% 95%,
+            rgba(34, 197, 94, 0.14),
+            transparent 60%
+          );
+        mix-blend-mode: screen;
+        opacity: 0.55;
+        pointer-events: none;
+        transform: translateZ(0);
+        animation: floatGlow 10s ease-in-out infinite;
+      }
+      @keyframes floatGlow {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+          transform: translate3d(0, -10px, 0) scale(1.02);
+        }
+      }
+
+      .heroContent {
+        position: relative;
+        padding: 34px 30px 26px;
+      }
+      .kicker {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 7px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.78);
+        font-weight: 650;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .kicker .miniDot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 0 0 6px rgba(125, 211, 252, 0.08);
+      }
+
+      h1 {
+        margin: 14px 0 10px;
+        font-size: clamp(32px, 4vw, 48px);
+        line-height: 1.06;
+        letter-spacing: -0.6px;
+      }
+      .lead {
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-size: 16px;
+        max-width: 58ch;
+      }
+      .quoteBox {
+        display: grid;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .quote {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 14px 14px 14px 16px;
+        position: relative;
+        overflow: hidden;
+      }
+      .quote:before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(
+          120deg,
+          rgba(125, 211, 252, 0.2),
+          rgba(167, 139, 250, 0.12),
+          transparent 60%
+        );
+        opacity: 0.25;
+        filter: blur(18px);
+        transform: translateX(-30%);
+      }
+      .quote p {
+        margin: 0;
+        position: relative;
+        font-weight: 650;
+      }
+      .quote small {
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        position: relative;
+      }
+
+      .ctaRow {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+      .btn {
+        cursor: pointer;
+        border-radius: 999px;
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        font-weight: 750;
+        transition:
+          transform 0.18s ease,
+          background 0.18s ease,
+          border 0.18s ease,
+          filter 0.18s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        user-select: none;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .btn:active {
+        transform: translateY(0) scale(0.98);
+      }
+      .btn.primary {
+        border: 1px solid rgba(125, 211, 252, 0.4);
+        background: linear-gradient(
+          135deg,
+          rgba(125, 211, 252, 0.18),
+          rgba(167, 139, 250, 0.16)
+        );
+      }
+      .chip {
+        border-radius: 999px;
+        padding: 6px 10px;
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      /* right side hero info */
+      .infoStack {
+        display: grid;
+        gap: 14px;
+      }
+      .glass {
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: var(--shadow2);
+        padding: 18px;
+        position: relative;
+        overflow: hidden;
+      }
+      .glass:after {
+        content: "";
+        position: absolute;
+        right: -120px;
+        top: -120px;
+        width: 260px;
+        height: 260px;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(125, 211, 252, 0.18),
+          transparent 60%
+        );
+        filter: blur(8px);
+        pointer-events: none;
+      }
+      .glass h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+      }
+      .glass p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 12px;
+      }
+      .stat {
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 12px;
+      }
+      .stat b {
+        display: block;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+      }
+      .stat span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 520px) {
+        .stats {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ===== PRESIDENTS ===== */
+      .sectionTitle {
+        margin: 0 0 12px;
+        font-size: clamp(26px, 3vw, 34px);
+        letter-spacing: -0.4px;
+      }
+      .sectionLead {
+        margin: 0 0 20px;
+        color: var(--muted);
+        max-width: 70ch;
+        line-height: 1.6;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+      @media (max-width: 980px) {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 540px) {
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: var(--shadow2);
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        transform: translateZ(0);
+        transition:
+          transform 0.25s ease,
+          border 0.25s ease,
+          background 0.25s ease;
+        min-height: 280px;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border: 1px solid rgba(125, 211, 252, 0.28);
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .card:active {
+        transform: translateY(-2px) scale(0.99);
+      }
+
+      .cardImg {
+        height: 160px;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)),
+          var(--img) center/cover no-repeat;
+        position: relative;
+      }
+      .cardBadge {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 12px;
+        backdrop-filter: blur(10px);
+      }
+      .cardBody {
+        padding: 14px 14px 16px;
+      }
+      .cardBody b {
+        display: block;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+      }
+      .cardBody small {
+        color: var(--muted);
+        display: block;
+        margin-top: 4px;
+      }
+      .cardHint {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+      }
+      .arrow {
+        width: 18px;
+        height: 18px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.06);
+        display: grid;
+        place-items: center;
+        transition: transform 0.25s ease;
+      }
+      .card:hover .arrow {
+        transform: translateX(2px);
+      }
+
+      /* ===== MISSION ===== */
+      .missionGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: stretch;
+      }
+      @media (max-width: 980px) {
+        .missionGrid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .bullets {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .bullet {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 12px;
+      }
+      .tick {
+        width: 22px;
+        height: 22px;
+        border-radius: 8px;
+        border: 1px solid rgba(52, 211, 153, 0.35);
+        background: rgba(52, 211, 153, 0.12);
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        margin-top: 1px;
+      }
+      .bullet b {
+        display: block;
+        font-size: 14px;
+      }
+      .bullet span {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      /* ===== MODAL ===== */
+      .modalBackdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 80;
+      }
+      .modalBackdrop.open {
+        display: flex;
+      }
+
+      .modal {
+        width: min(860px, 100%);
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(12, 18, 35, 0.75);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transform: translateY(18px) scale(0.98);
+        opacity: 0;
+        transition:
+          transform 0.25s ease,
+          opacity 0.25s ease;
+        position: relative;
+      }
+      .modalBackdrop.open .modal {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      .modalHeader {
+        display: flex;
+        gap: 14px;
+        padding: 16px 16px 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        align-items: center;
+        justify-content: space-between;
+      }
+      .modalHeader .left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: linear-gradient(
+          135deg,
+          rgba(125, 211, 252, 0.15),
+          rgba(167, 139, 250, 0.1)
+        );
+        overflow: hidden;
+        flex: 0 0 auto;
+      }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .modalHeader h4 {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+      }
+      .modalHeader p {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .closeBtn {
+        cursor: pointer;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        transition:
+          transform 0.18s ease,
+          background 0.18s ease;
+      }
+      .closeBtn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .closeBtn:active {
+        transform: translateY(0) scale(0.98);
+      }
+
+      .modalBody {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 0;
+        min-height: 420px;
+      }
+      @media (max-width: 860px) {
+        .modalBody {
+          grid-template-columns: 1fr;
+        }
+      }
+      .modalPhoto {
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)),
+          var(--mimg) center/cover no-repeat;
+        min-height: 240px;
+        position: relative;
+      }
+      .modalPhoto:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          520px 320px at 30% 15%,
+          rgba(125, 211, 252, 0.16),
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .modalText {
+        padding: 18px 18px 20px;
+      }
+      .pillRow {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .pill {
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 12px;
+      }
+      .modalText h5 {
+        margin: 8px 0 8px;
+        font-size: 15px;
+        letter-spacing: -0.2px;
+      }
+      .modalText .para {
+        margin: 0 0 10px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .miniList {
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 12px;
+        margin-top: 12px;
+      }
+      .miniList li {
+        color: rgba(255, 255, 255, 0.78);
+        margin: 8px 0;
+      }
+      .miniList li span {
+        color: var(--muted);
+      }
+
+      /* ===== reveal animation ===== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        filter: blur(6px);
+        transition:
+          opacity 0.7s cubic-bezier(0.2, 0.9, 0.2, 1),
+          transform 0.7s cubic-bezier(0.2, 0.9, 0.2, 1),
+          filter 0.7s cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+      .stagger > * {
+        transition-delay: var(--d, 0ms);
+      }
+
+      /* ===== footer ===== */
+      footer {
+        padding: 26px 0 36px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* ===== reduced motion ===== */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+          filter: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <div class="nav">
+      <div class="container">
+        <div class="wrap">
+          <div class="brand" aria-label="Сайт атауы">
+            <span class="dot"></span>
+            <div>
+              <b>Маңғыстау ауданы</b><br />
+              <span style="color: var(--muted); font-size: 12px"
+                >Президенттер • Таныстыру • Миссия</span
+              >
+            </div>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Бөлімдер">
+            <a
+              class="tab active"
+              href="#home"
+              data-target="home"
+              role="tab"
+              aria-selected="true"
+            >
+              Басты бет
+              <span class="underline"></span>
+            </a>
+            <a
+              class="tab"
+              href="#presidents"
+              data-target="presidents"
+              role="tab"
+              aria-selected="false"
+            >
+              Таныстыру
+              <span class="underline"></span>
+            </a>
+            <a
+              class="tab"
+              href="#mission"
+              data-target="mission"
+              role="tab"
+              aria-selected="false"
+            >
+              Біздің миссия
+              <span class="underline"></span>
+            </a>
+          </div>
+
+          <a class="navBtn" href="#presidents">
+            <span class="chip">4</span>
+            Президенттер
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- HOME -->
+      <section id="home">
+        <div class="container grid2">
+          <div class="heroCard reveal">
+            <div class="heroBg" aria-hidden="true"></div>
+            <div class="heroGlow" aria-hidden="true"></div>
+
+            <div class="heroContent">
+              <div class="kicker">
+                <span class="miniDot"></span> Бірлік бар жерде-береке бар
+              </div>
+              <h1>Маңғыстау ауданының<br />президенттері</h1>
+              <p class="lead">
+                Бұл сайтта: Оқушылар көшбасшылығының құрылымы мен қызметі
+                ұсынылады 4 президенттің жеке профилі (мектеп, рөл, жетістік)
+                берілген Миссия және қоғамға бағытталған мақсаттар көрсетіледі
+              </p>
+
+              <div class="quoteBox stagger reveal">
+                <div class="quote" style="--d: 60ms">
+                  <p>
+                    «Көшбасшы болу, бірінші болу емес. Көшбасшы болу,
+                    жауапкершілікті бірінші алу.»
+                  </p>
+                  <small>Жобаның ұраны</small>
+                </div>
+                <div class="quote" style="--d: 140ms">
+                  <p>
+                    «Өзгеріс үлкен сөзден емес, күнделікті кішкентай шешімдерден
+                    басталады.»
+                  </p>
+                  <small>Команда философиясы</small>
+                </div>
+              </div>
+
+              <div class="ctaRow reveal" style="margin-top: 18px">
+                <button
+                  class="btn primary"
+                  data-goto="presidents"
+                  type="button"
+                >
+                  Таныстыру бөліміне өту
+                  <span class="arrow">➜</span>
+                </button>
+                <button class="btn" data-goto="mission" type="button">
+                  Біздің миссия
+                  <span class="arrow">➜</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="infoStack">
+            <div class="glass reveal">
+              <h3>Неге бұл жоба маңызды?</h3>
+              <p>
+                Мектеп және аудан деңгейінде көшбасшылардың рөлін зерттеу арқылы
+                оқушылардың азаматтық белсенділігі мен жауапкершілігін арттыруға
+                болады.
+              </p>
+              <div class="stats reveal" style="margin-top: 14px">
+                <div class="stat"><b>3</b><span>бөлім</span></div>
+                <div class="stat"><b>4</b><span>президент</span></div>
+                <div class="stat"><b>1</b><span>миссия</span></div>
+              </div>
+            </div>
+
+            <div class="glass reveal">
+              <h3>Қысқаша навигация</h3>
+              <p>Төмендегі батырмалар сені керекті бөлімге бірден апарады.</p>
+              <div class="ctaRow" style="margin-top: 12px">
+                <a class="btn" href="#home">Басты бет</a>
+                <a class="btn" href="#presidents">Таныстыру</a>
+                <a class="btn" href="#mission">Миссия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRESIDENTS -->
+      <section id="presidents">
+        <div class="container">
+          <div class="reveal">
+            <h2 class="sectionTitle">Таныстыру: 4 президент</h2>
+            <p class="sectionLead">
+              Әр президенттің карточкасын бассаң, толық ақпарат ашылады:
+              мектептері, қызметі, жетістігі және қысқаша сипаттамасы.
+            </p>
+          </div>
+
+          <div class="cards stagger">
+            <!-- Card 1 -->
+            <div
+              class="card reveal"
+              style="--d: 80ms"
+              data-open="p1"
+              role="button"
+              tabindex="0"
+              aria-label="Президент 1 туралы ақпарат"
+            >
+              <div class="cardImg" style="--img: url(&quot;аха.jpg&quot;)">
+                <div class="cardBadge">Президент 1</div>
+              </div>
+              <div class="cardBody">
+                <b
+                  >Аты-жөні:
+                  <span style="color: var(--accent)">Рахат Нұрахмет</span></b
+                >
+                <small>Мектебі:Б.Жұмалиев атындағы ЖББМ призиденті</small>
+                <div class="cardHint">
+                  <span class="arrow">➜</span> Толық ақпарат
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="card reveal"
+              style="--d: 140ms"
+              data-open="p2"
+              role="button"
+              tabindex="0"
+              aria-label="Президент 2 туралы ақпарат"
+            >
+              <div class="cardImg" style="--img: url(&quot;аружан.jpg&quot;)">
+                <div class="cardBadge">Президент 2</div>
+              </div>
+              <div class="cardBody">
+                <b
+                  >Аты-жөні:
+                  <span style="color: var(--accent2)">Асылбек Аружан</span></b
+                >
+                <small>Мектебі:№1 ЖББМ</small>
+                <div class="cardHint">
+                  <span class="arrow">➜</span> Толық ақпарат
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="card reveal"
+              style="--d: 200ms"
+              data-open="p3"
+              role="button"
+              tabindex="0"
+              aria-label="Президент 3 туралы ақпарат"
+            >
+              <div class="cardImg" style="--img: url(&quot;ak.jpg&quot;)">
+                <div class="cardBadge">Президент 3</div>
+              </div>
+              <div class="cardBody">
+                <b
+                  >Аты-жөні:
+                  <span style="color: #34d399">Айболатқызы Ақкүміс</span></b
+                >
+                <small>Мектебі: Мекерия Атымов атындағы #6 ЖББМ</small>
+                <div class="cardHint">
+                  <span class="arrow">➜</span> Толық ақпарат
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="card reveal"
+              style="--d: 260ms"
+              data-open="p4"
+              role="button"
+              tabindex="0"
+              aria-label="Президент 4 туралы ақпарат"
+            >
+              <div class="cardImg" style="--img: url(&quot;фрифаер.jpg&quot;)">
+                <div class="cardBadge">Президент 4</div>
+              </div>
+              <div class="cardBody">
+                <b
+                  >Аты-жөні:
+                  <span style="color: #fbbf24">Айкен Кенжебек</span></b
+                >
+                <small
+                  >Мектебі:Кенжебек Айкен «Е.Айшуақұлы атындағы ЖББМ» КММ</small
+                >
+                <div class="cardHint">
+                  <span class="arrow">➜</span> Толық ақпарат
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass reveal" style="margin-top: 18px"></div>
+        </div>
+      </section>
+
+      <!-- MISSION -->
+      <section id="mission">
+        <div class="container">
+          <div class="reveal">
+            <h2 class="sectionTitle">Біздің миссия</h2>
+            <p class="sectionLead">
+              Біз көшбасшылықты сән үшін емес, қоғамға пайда беру үшін
+              дамытамыз. Мектептегі бастама ауданға әсер ететін нақты
+              іс-әрекетке айналуы тиіс.
+            </p>
+          </div>
+
+          <div class="missionGrid">
+            <div class="glass reveal">
+              <h3>Миссия мәтіні</h3>
+              <p>
+                Біздің мақсат: оқушылардың азаматтық жауапкершілігін арттыру,
+                командада жұмыс істеу мәдениетін дамыту, және мектеп ішіндегі
+                идеяны аудан деңгейіндегі пайдалы жобаларға айналдыру.
+              </p>
+
+              <div class="bullets">
+                <div class="bullet">
+                  <div class="tick">✓</div>
+                  <div>
+                    <b>Жауапкершілік</b>
+                    <span
+                      >Әр бастама нақты жоспар мен нәтижеге тірелуі керек.</span
+                    >
+                  </div>
+                </div>
+                <div class="bullet">
+                  <div class="tick">✓</div>
+                  <div>
+                    <b>Әділдік</b>
+                    <span
+                      >Ұсыныс пен шешім ашық талқыланып, ортақ келісіммен
+                      қабылданады.</span
+                    >
+                  </div>
+                </div>
+                <div class="bullet">
+                  <div class="tick">✓</div>
+                  <div>
+                    <b>Қоғамға пайда</b>
+                    <span>Ең маңызды өлшем: мектептен тыс ортаға әсері.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass reveal">
+              <div class="quoteBox">
+                <div class="quote">
+                  <p>«Ең күшті көшбасшылық: өзіңді басқарудан басталады.»</p>
+                  <small>Команда қағидасы</small>
+                </div>
+                <div class="quote">
+                  <p>«Біз ұранға емес, нәтижеге жұмыс істейміз.»</p>
+                  <small>Жобаның ұстанымы</small>
+                </div>
+              </div>
+
+              <div class="miniList" style="margin-top: 14px">
+                <h5 style="margin: 0 0 6px">Қысқа жоспар</h5>
+                <ul style="margin: 0; padding-left: 18px">
+                  <li><span>Ай сайын:</span> идея жинау және талқылау</li>
+                  <li><span>Тоқсан сайын:</span> 1 әлеуметтік бастама</li>
+                  <li>
+                    <span>Жыл соңында:</span> нәтижені есеп беру, қорытынды
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> • Маңғыстау ауданы • Оқушылар көшбасшылығы
+        жобасы
+      </footer>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modalBackdrop" id="modalBackdrop" aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mTitle"
+      >
+        <div class="modalHeader">
+          <div class="left">
+            <div class="avatar">
+              <img id="mAvatar" alt="Президент фото" src="p1.jpg" />
+            </div>
+            <div style="min-width: 0">
+              <h4 id="mTitle">Президент</h4>
+              <p id="mSub">Мектебі • Лауазымы</p>
+            </div>
+          </div>
+          <button
+            class="closeBtn"
+            id="closeBtn"
+            type="button"
+            aria-label="Жабу"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="modalBody">
+          <div
+            class="modalPhoto"
+            id="mPhoto"
+            style="--mimg: url(&quot;p1.jpg&quot;)"
+          ></div>
+          <div class="modalText">
+            <div class="pillRow" id="mPills"></div>
+
+            <h5>Қысқаша сипаттама</h5>
+            <p class="para" id="mAbout">
+              Мұнда президент туралы негізгі ақпарат болады: мінезі,
+              жауапкершілігі, командаға әсері.
+            </p>
+
+            <h5>Жетістіктері / Іс-шаралар</h5>
+            <ul
+              class="miniList"
+              id="mList"
+              style="padding-left: 22px; margin: 0"
+            >
+              <li>Мектепішілік жобаларға жетекшілік ету</li>
+              <li>Еріктілік / әлеуметтік акция ұйымдастыру</li>
+              <li>Пікірталас/спорт/ғылыми бағыттағы белсенділік</li>
+            </ul>
+
+            <div style="margin-top: 14px">
+              <button class="btn primary" id="miniClose" type="button">
+                Жабу
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== DATA (ОСЫ ЖЕРДІ ӨЗІҢНІҢ АҚПАРАТЫҢМЕН АУЫСТЫРАСЫҢ) =====
+      const presidents = {
+        p1: {
+          badge: "Президент 1",
+          name: "Рахат Нұрахмет",
+          school: "Б.Жұмалиев атындағы ЖББМ призиденті",
+          photo: "аха.jpg",
+          pills: ["Көшбасшылық", "Команда", "Жауапкершілік"],
+          about:
+            "Менің аты-жөнім Рахат Нұрахмет мен Б.Жұмалиев атындағы жалпы білім беретін мектеп оқушысымын, өз мектебімнің парламент мүшелерімен көп деген шаралар ұйымдастырғанды ұнатамын.",
+          list: [
+            "Мектеп парламентінің отырыстарын ұйымдастыру",
+            "Оқушылардың ұсыныстарын жинау және іске асыру",
+            "Қайырымдылық/волонтерлік бастамалар жүргізу",
+          ],
+        },
+        p2: {
+          badge: "Президент 2",
+          name: "Асылбек Аружан",
+          school: "№1 ЖББМ призиденті",
+          photo: "аружан.jpg",
+          pills: ["Сөйлеу мәдениеті", "Пікірталас", "Ұйымдастыру"],
+          about:
+            "Менің аты-жөнім Асылбек Аружан мен N1 ші жалпы білім беретін мектеп оқушысы боламын, мен өз мектебімнің тәртібіне өте қатты қараймын және өз мектебімнің бірінші орында болғанын қалаймын",
+          list: [
+            "Дебат/форум форматында талқылаулар өткізу",
+            "Жоба жоспарын құру және уақытты басқару",
+            "Мектеп медиа/ақпарат жұмысына үлес қосу",
+          ],
+        },
+        p3: {
+          badge: "Президент 3",
+          name: "Айболатқызы Ақкүміс ",
+          school: "Мекерия Атымов атындағы #6 ЖББМ призиденті",
+          photo: "ak.jpg",
+          pills: ["Идея", "Театр", "Нәтиже"],
+          about:
+            "Менің аты-жөнім Айболатқызы Ақкүміс мен Мекерия Атымов атындагы жалпы білім беретін мектеп оқушысымын, өз мектепбімнің театр ұйымының мүшесімін жәнеде өз мектепбімнің театр клубына қатаң қараймын.",
+          list: [
+            "Сынып/мектепаралық іс-шараларға жетекшілік",
+            "Әлеуметтік бастамаларға қатысу",
+            "Оқушылар арасында кері байланыс жүйесін құру",
+          ],
+        },
+        p4: {
+          badge: "Президент 4",
+          name: "Кенжебек Айкен",
+          school: "«Е.Айшуақұлы атындағы ЖББМ» КММ призиденті ",
+          photo: "фрифаер.jpg",
+          pills: ["Жоба", "Пайда", "Жауапкершілік"],
+          about:
+            "Менің аты-жөнім Кенжебек Айкен мен Е.Айшуақұлы атындағы жалпы білім беретін мектеп оқушысымын, мен волейбол спортымен айналсамын жәнеде өз мектебімнің тәртіп және талаптарына қатаң қараймын.",
+          list: [
+            "Мектеп ішінде жобаларды үйлестіру",
+            "Еріктілік бағытында акциялар өткізу",
+            "Оқушылардың бастамаларын қолдау және дамыту",
+          ],
+        },
+      };
+
+      // ===== Smooth scroll + tab active =====
+      const tabs = document.querySelectorAll(".tab");
+      const sections = ["home", "presidents", "mission"].map((id) =>
+        document.getElementById(id),
+      );
+
+      function setActive(id) {
+        tabs.forEach((t) => {
+          const on = t.dataset.target === id;
+          t.classList.toggle("active", on);
+          t.setAttribute("aria-selected", on ? "true" : "false");
+        });
+      }
+
+      document.querySelectorAll("[data-goto]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-goto");
+          document
+            .getElementById(id)
+            .scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      // ===== Reveal animations (IntersectionObserver) =====
+      const revealEls = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("show");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.14 },
+      );
+
+      revealEls.forEach((el) => io.observe(el));
+
+      // Stagger delays
+      document.querySelectorAll(".stagger").forEach((group) => {
+        [...group.children].forEach((child, i) => {
+          const base =
+            Number(
+              (child.style.getPropertyValue("--d") || "0ms").replace("ms", ""),
+            ) || 0;
+          child.style.setProperty("--d", base + i * 60 + "ms");
+          child.style.transitionDelay = child.style.getPropertyValue("--d");
+        });
+      });
+
+      // ===== Section tracking for nav active =====
+      const spy = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              setActive(e.target.id);
+            }
+          });
+        },
+        { threshold: 0.45 },
+      );
+
+      sections.forEach((s) => spy.observe(s));
+
+      // ===== Modal =====
+      const backdrop = document.getElementById("modalBackdrop");
+      const closeBtn = document.getElementById("closeBtn");
+      const miniClose = document.getElementById("miniClose");
+      const mAvatar = document.getElementById("mAvatar");
+      const mTitle = document.getElementById("mTitle");
+      const mSub = document.getElementById("mSub");
+      const mPhoto = document.getElementById("mPhoto");
+      const mPills = document.getElementById("mPills");
+      const mAbout = document.getElementById("mAbout");
+      const mList = document.getElementById("mList");
+
+      function openModal(key) {
+        const d = presidents[key];
+        if (!d) return;
+        mAvatar.src = d.photo;
+        mTitle.textContent = `${d.badge}: ${d.name}`;
+        mSub.textContent = `${d.school} • ${d.role}`;
+        mPhoto.style.setProperty("--mimg", `url('${d.photo}')`);
+
+        mPills.innerHTML = "";
+        d.pills.forEach((t) => {
+          const s = document.createElement("span");
+          s.className = "pill";
+          s.textContent = t;
+          mPills.appendChild(s);
+        });
+
+        mAbout.textContent = d.about;
+
+        mList.innerHTML = "";
+        d.list.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          mList.appendChild(li);
+        });
+
+        backdrop.classList.add("open");
+        backdrop.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        backdrop.classList.remove("open");
+        backdrop.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll("[data-open]").forEach((card) => {
+        const key = card.getAttribute("data-open");
+        const open = () => openModal(key);
+
+        card.addEventListener("click", open);
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            open();
+          }
+        });
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+      miniClose.addEventListener("click", closeModal);
+      backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) closeModal();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && backdrop.classList.contains("open"))
+          closeModal();
+      });
+
+      // Year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // A tiny "parallax-ish" glow follow for hero (subtle, pro-ish)
+      const hero = document.querySelector(".heroCard");
+      const glow = document.querySelector(".heroGlow");
+      if (hero && glow) {
+        hero.addEventListener("mousemove", (e) => {
+          const r = hero.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width;
+          const y = (e.clientY - r.top) / r.height;
+          glow.style.transform = `translate3d(${(x - 0.5) * 12}px, ${(y - 0.5) * -10}px, 0) scale(1.02)`;
+        });
+        hero.addEventListener("mouseleave", () => {
+          glow.style.transform = "translate3d(0,0,0) scale(1)";
+        });
+      }
+    </script>
+  </body>
+</html>
